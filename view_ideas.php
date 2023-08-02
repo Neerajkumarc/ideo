@@ -10,10 +10,10 @@ $result = $connection->query($sql);
     <?php
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<div class='card text-bg-dark mb-3 mx-auto' style='width: 40rem;'>";
+            echo "<div class='card text-bg-dark mb-3 mx-auto' style='max-width: 40rem;'>";
             echo "<h2 class='card-header'>" . $row['title'] . "</h2>";
             echo "<p class='card-body'>" . $row['description'] . "</p>";
-            echo "<p class='card-footer'>Submitted By: " . $row['submitted_by'] . "</p>";
+            echo "<p class='card-footer fst-italic fw-lighter'>Submitted By: " . $row['submitted_by'] . "</p>";
             echo "</div>";
         }
     } else {
